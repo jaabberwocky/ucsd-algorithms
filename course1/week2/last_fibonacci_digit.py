@@ -1,7 +1,7 @@
 def get_last_fibonacci_digit(n):
     """
-    Get last digit of the n-th Fibonacci number. Exploits the observation that the
-    last digit is the sum of the preceding two digits.
+    Get last digit of the n-th Fibonacci number. Exploits the observation that
+    the last digit is the sum of the preceding two digits.
 
     Args:
         n (int): n-th Fibonacci number
