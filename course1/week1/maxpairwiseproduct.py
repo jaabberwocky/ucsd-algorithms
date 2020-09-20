@@ -48,6 +48,9 @@ def fast_implementation(a):
 
 
 if __name__ == "__main__":
-    n = int(input())
-    a = [int(x) for x in input().split()]
+    n = 5
+    a = [1, 2, 3, 4, 5]
+    # n = int(input())
+    # a = [int(x) for x in input().split()]
+
     print(fast_implementation(a))
