@@ -29,3 +29,9 @@ def improved_gcd(a, b):
     else:
         a_prime = a % b
         return improved_gcd(b, a_prime)
+
+
+if __name__ == "__main__":
+    n = [int(x) for x in input().split()]
+    a, b = n[0], n[1]
+    print(improved_gcd(a, b))
