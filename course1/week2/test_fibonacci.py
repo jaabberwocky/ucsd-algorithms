@@ -1,4 +1,5 @@
-from fibonacci import naive_fib, improved_fib  # noqa
+from fibonacci import naive_fib, improved_fib # noqa
+from last_fibonacci_digit import get_last_fibonacci_digit # noqa
 
 
 def test_naive_fib_small():
@@ -25,3 +26,9 @@ def test_improved_fib_large():
     assert improved_fib(50) == 12586269025
     assert improved_fib(20) == 6765
     assert improved_fib(10) == 55
+
+
+def test_last_digit():
+    assert get_last_fibonacci_digit(50) == 5
+    assert get_last_fibonacci_digit(20) == 5
+    assert get_last_fibonacci_digit(1) == 1
