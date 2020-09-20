@@ -20,10 +20,10 @@ def get_last_fibonacci_digit(n):
 
 def add_first_two_fib(sequence):
     """
-    Adds the first two Fibonacci numbers (0 and 1) to the list of sequences.
+    Adds the first two Fibonacci numbers (0 and 1) to the sequence of numbers.
 
     Args:
-        sequence (list): List of Fibonacci digits
+        sequence (list): List of Fibonacci numbers
     """
     sequence.append(0)
     sequence.append(1)
