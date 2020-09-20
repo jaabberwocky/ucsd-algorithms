@@ -1,39 +1,7 @@
-def improved_fib(n):
-    """Improved implementation in O(n) time.
-
-    Args:
-        n (int): Number to generate a Fibonacci number for.
-
-    Returns:
-        int: Fibonacci number for sequence n.
-    """
-    sequence = []
-
-    for i in range(n+1):
-        if i in [0, 1]:
-            sequence.append(i)
-        else:
-            sequence.append(sequence[i - 1] + sequence[i - 2])
-
-    return sequence[-1]
-
-
-def get_last_digit(num):
-    """
-    Get last digit of a number.
-
-    Args:
-        num (int): Number
-
-    Returns:
-        int: Last digit
-    """
-    return num % 10
-
-
 def get_last_fibonacci_digit(n):
     """
-    Get last digit of the n-th Fibonacci number.
+    Get last digit of the n-th Fibonacci number. Exploits the observation that the
+    last digit is the sum of the preceding two digits.
 
     Args:
         n (int): n-th Fibonacci number
@@ -41,8 +9,24 @@ def get_last_fibonacci_digit(n):
     Returns:
         int: Last digit of n-th Fibonacci number
     """
-    fib = improved_fib(n)
-    return get_last_digit(fib)
+    sequence = []
+    add_first_two_fib(sequence)
+
+    for i in range(2, n+1):
+        last_digit = sequence[i-2] + sequence[i-1]
+        sequence.append(last_digit % 10)
+    return sequence[-1]
+
+
+def add_first_two_fib(sequence):
+    """
+    Adds the first two Fibonacci numbers (0 and 1) to the list of sequences.
+
+    Args:
+        sequence (list): List of Fibonacci digits
+    """
+    sequence.append(0)
+    sequence.append(1)
 
 
 if __name__ == "__main__":
