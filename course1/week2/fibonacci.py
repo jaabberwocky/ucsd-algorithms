@@ -31,3 +31,8 @@ def improved_fib(n):
             sequence.append(sequence[i - 1] + sequence[i - 2])
 
     return sequence[-1]
+
+
+if __name__ == "__main__":
+    n = int(input())
+    print(improved_fib(n))
