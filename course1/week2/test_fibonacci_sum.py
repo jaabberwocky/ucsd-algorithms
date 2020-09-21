@@ -1,7 +1,9 @@
-from fibonacci_sum import improved_fibo_sum  # noqa
+from fibonacci_sum import LastDigitFibo  # noqa
 
 
 def test1():
-    assert improved_fibo_sum(3) == 4
-    assert improved_fibo_sum(100) == 5
-    assert improved_fibo_sum(1500) == 0
+    L = LastDigitFibo()
+    assert L.get_last_digit_of_sum(4) == 3
+    assert L.get_last_digit_of_sum(100) == 5
+    assert L.get_last_digit_of_sum(1500) == 0
+    assert L.get_last_digit_of_sum(0) == 0

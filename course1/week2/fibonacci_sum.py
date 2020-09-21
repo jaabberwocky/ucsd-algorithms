@@ -1,20 +1,21 @@
-def naive_fibo_sum(n):
-    seq = []
-    seq.append(0)
-    seq.append(1)
-    sum = 1
+class LastDigitFibo:
+    def __init__(self):
+        self.init_sequence()
 
-    for i in range(2, n+1):
-        fib = seq[i - 2] + seq[i - 1]
-        sum += fib
-        seq.append(fib)
+    def init_sequence(self):
+        last_digits = []
+        last_digits.append(0)
+        last_digits.append(1)
 
-    return sum % 10
+        for i in range(2, 60):
+            last_digits.append(improved_fib(i) % 10)
+        self.sequence = last_digits
 
+    def get_sequence(self):
+        return self.sequence
 
-def improved_fibo_sum(n):
-    sum = improved_fib(n + 2) - 1
-    return sum % 10
+    def get_last_digit_of_sum(self, n):
+        return self.sequence[n % 60]
 
 
 def improved_fib(n):
@@ -26,16 +27,18 @@ def improved_fib(n):
     Returns:
         int: Fibonacci number for sequence n.
     """
-    last_fib = 1
-    second_last_fib = 0
+    sequence = []
 
-    for _ in range(2, n+1):
-        fib = last_fib + second_last_fib
-        second_last_fib = last_fib
-        last_fib = fib
-    return fib
+    for i in range(n+1):
+        if i in [0, 1]:
+            sequence.append(i)
+        else:
+            sequence.append(sequence[i - 1] + sequence[i - 2])
+
+    return sequence[-1]
 
 
 if __name__ == "__main__":
     n = int(input())
-    print(improved_fibo_sum(n))
+    L = LastDigitFibo()
+    print(L.get_last_digit_of_sum(n))
