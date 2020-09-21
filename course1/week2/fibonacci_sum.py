@@ -26,15 +26,14 @@ def improved_fib(n):
     Returns:
         int: Fibonacci number for sequence n.
     """
-    sequence = []
+    last_fib = 1
+    second_last_fib = 0
 
-    for i in range(n+1):
-        if i in [0, 1]:
-            sequence.append(i)
-        else:
-            sequence.append(sequence[i - 1] + sequence[i - 2])
-
-    return sequence[-1]
+    for _ in range(2, n+1):
+        fib = last_fib + second_last_fib
+        second_last_fib = last_fib
+        last_fib = fib
+    return fib
 
 
 if __name__ == "__main__":
