@@ -15,7 +15,11 @@ class LastDigitFibo:
         return self.sequence
 
     def get_last_digit_of_sum(self, n):
-        return self.sequence[n % 60]
+        last_digit = self.sequence[(n+2) % 60] - 1
+        if last_digit < 0:
+            return 9
+        else:
+            return last_digit
 
 
 def improved_fib(n):
