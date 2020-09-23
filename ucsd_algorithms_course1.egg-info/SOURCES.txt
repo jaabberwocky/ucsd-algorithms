@@ -1,0 +1,7 @@
+README.md
+setup.py
+algo_course1/__init__.py
+ucsd_algorithms_course1.egg-info/PKG-INFO
+ucsd_algorithms_course1.egg-info/SOURCES.txt
+ucsd_algorithms_course1.egg-info/dependency_links.txt
+ucsd_algorithms_course1.egg-info/top_level.txt

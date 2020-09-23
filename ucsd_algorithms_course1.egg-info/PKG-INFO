@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ucsd-algorithms-course1
+Version: 0.0.1
+Summary: Collection of modules for the UCSD course
+Home-page: https://github.com/jaabberwocky/ucsd-algorithms
+Author: Tobias
+Author-email: tobias.datascience@gmail.com
+License: UNKNOWN
+Description: # Code submissions for UCSD Algorithms and Data Structures Specialisation
+        
+        Python code submissions and packages.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
