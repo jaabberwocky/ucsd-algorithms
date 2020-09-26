@@ -41,12 +41,10 @@ class LastDigitFibo:
         else:
             return last_digit
 
-    def _get_sum_of_squares(self, n):
-        return self._improved_fib(n) * self._improved_fib(n+1)
-
     def get_last_digit_of_sum_of_squares(self, n):
-        sum_of_squares = self._get_sum_of_squares(n)
-        return sum_of_squares % 10
+        vertical_last_digit = self.sequence[n % 60]
+        horizontal_last_digit = self.sequence[(n+1) % 60]
+        return (vertical_last_digit * horizontal_last_digit) % 10
 
 
 if __name__ == "__main__":
